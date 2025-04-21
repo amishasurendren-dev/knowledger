@@ -1,0 +1,297 @@
+@charset "ISO-8859-1";
+
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	color: white;
+ }
+ 
+ 
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;	
+	background-color: black;
+}
+
+
+header #logo{
+	height: 40px;
+	width: 40px;
+	background-image: url('/images/logo1.jpg');
+	background-repeat: no repeat;
+	background-size: cover;
+	border: 1px solid white;
+	border-radius: 4px;
+	
+	/*
+	font-size: 3em;
+	color: #bdf4e6;
+	border:1px solid white;
+	border-radius: 5px;
+	padding: 7px 14px;
+	background: linear-gradient(135deg,grey 20% ,black 100%);
+	*/
+	
+}
+
+.navigation a{
+	position: relative;
+	font-size: 1.1em;
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 40px;		
+}
+
+header .knowledger{
+	margin-right: 320px;
+	color: white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+	}
+	
+header span{
+	 color: #74e9d1;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
+
+
+.navigation a::after{
+	content: ' ';
+	position: absolute;
+    left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 3px;
+	background: white;
+	border-radius: 5px;
+	transform: scaleX(0);	
+	transition: transform .5s;	
+}
+
+.navigation a:hover::after{
+	transform-origin: left;
+	transform: scaleX(1);
+		
+}
+
+
+
+
+.navigation .btnLogin{
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;         
+            background-color: black;
+            color: #fff;
+            text-decoration: none;
+            
+        }
+.navigation  .btnLogin:hover{
+	background: white;
+    color: black;
+}
+
+
+
+
+
+body {
+	background-color: #f8f9fa;
+	font-family: Arial, sans-serif;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes showBottomText {
+  0% { transform: translate3d(0, 0, 0); }
+  /*40%, 60% { transform: translate3d(0, 50%, 0); }*/
+  100% { transform: translate3d(0, 100%, 0); }
+}
+
+.animated-title {
+  color: black;
+  font-family: Roboto, Arial, sans-serif;
+  height: 150px;
+  top: 35%;
+  left: 50%;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  width: 600px;
+  text-align: center;
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.animated-title > div div {
+  font-size: 50px;
+  padding: 2vmin 0;
+  position: absolute;
+  text-align: center;
+}
+.animated-title > div div span {
+  display: block;
+  
+}
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #000;
+  top: 0;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+  padding-left: 120px;
+  color: black;
+  font-size: 50px;
+  text-shadow: 2px 2px 8px #52e0c4;
+ 
+}
+
+.animated-title > div div span:last-child {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+
+.animated-title > div.text-bottom div {
+  font-size: 50px;
+ 
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  margin-top: 20px;
+  margin-left: 180px;
+  text-align: center;
+  animation: showText 2s linear;
+}
+
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  80% {  
+    opacity: 0;
+  }
+  99% {   
+    opacity: 0.95;
+  }
+  100% {    
+    opacity: 1;
+  }
+}
+
+
+
+.buttons{	
+	display: flex;
+    align-items: center;
+    flex-direction: row;   
+    margin-top: 350px;
+}
+	
+
+.buttons .box {
+  height: 180px;
+  width: 180px;
+  background-color: white;
+  border-radius: 15px;
+  transition: all ease 0.2s;
+  background:  #74e9d1;
+  margin: 50px;
+  text-align: center;  
+  box-shadow: 0px 5px 10px 0.5px rgba(0,0,60);         
+}
+
+.box {
+  animation: ani 2s linear;
+}
+
+@keyframes ani {
+  0% {
+  
+    opacity: 0;
+  }
+  80% {
+   
+    opacity: 0;
+  }
+  99% {
+   
+    opacity: 0.95;
+  }
+  100% {
+    
+    opacity: 1;
+  }
+}
+
+
+.buttons .box:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0,0,64);
+}
+
+.buttons .box a{
+	color: black;
+	text-decoration: none;
+	font-size: 30px;
+	padding:40px;
+	font-family: cursive;
+	font-weight: 1000;	
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+	}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Index</title>
+<link th:href = "@{/css/RegisterStyle.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+
+   
+    <div id="logo">
+    </div>
+    <div class="knowledger">
+      <h2><span class="know">Know</span><span class="ledger">Ledger</span></h2>
+    </div>
+    
+        <nav class="navigation">
+        <a href="http://localhost:9094/">Home</a>
+        <a href="/nav/about">About</a>
+        <a href="/nav/services">Services</a>
+        <a href="/nav/contact">Contacts</a>
+        <a class="btnLogin" href="/nav/login">Login</a>
+    </nav>
+       
+</header>
+    
+     <!--  
+   
+    <h1>Discover, Learn, <span>and</span> Grow.</h1>
+
+   
+     -->
+     <!--  
+     <div class="image"> 
+    <img src="/images/RegiBackground.jpg" height="440px" width="400px">
+      </div>
+      -->
+    
+     
+     
+     
+    <div class="wrapper">
+         <div class="form-box login">
+               <form action="/nav/addUser" method="post">
+               
+               <h2>Register</h2>
+              
+                    <div class="input-box">
+                          <span class="icon"><ion-icon name="person"></ion-icon></span>
+                          <input type="text" name="name" placeholder="Enter your username" required>
+                          
+                    </div>
+                    
+                    <div class="input-box">
+                          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                          <input type="email" name="email" placeholder="Enter your email" required>
+                          
+                    </div>
+                    
+                    <div class="input-box">
+                          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                          <input type="password" name="password" placeholder="Enter your password" required>
+                          
+                    </div>
+                    
+                    <div class="role">
+                          
+                          <label>Role</label>
+                          <input class="role-radio" type="radio" name="role" value="Student">Student
+                          <input class="role-radio" type="radio" name="role" value="Trainer">Trainer
+                         
+                    </div>
+                    
+                    
+                    <div class="agree">
+                          <label><input type="checkbox">I agree to the terms and conditions</label>
+                         
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                    
+                    <div class="login-register">
+                         <p>Already have an account?     <a  th:href="@{/nav/login}">Login</a></p>                        
+                    </div>
+                    
+               </form>
+         </div>
+    </div>
+    
+    
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

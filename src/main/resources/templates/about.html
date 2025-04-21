@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>About Us - KnowLedger</title>
+<link th:href = "@{/css/about.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+
+    <div id="logo">
+    </div>
+    <div class="knowledger">
+    <h2><span class="know">Know</span><span class="ledger">Ledger</span></h2>
+    </div>
+    
+    <nav class="navigation">
+         <a href="http://localhost:9094/">Home</a>
+         <a href="/nav/about">About</a>  
+         <a href="/nav/services">Services</a>
+         <a href="/nav/contact">Contacts</a>  
+         <a class="btnLogin" th:href="@{/nav/login}">Login</a>
+    </nav>
+       
+</header>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to <strong>KnowLedger</strong>, a platform dedicated to providing high-quality learning resources to help individuals unlock their full potential. Whether you're looking to learn new skills, advance your career, or explore new topics, KnowLedger has something for everyone.</p>
+        
+        <h3>Our Mission</h3>
+        <p>Our mission is to empower individuals by providing easy access to knowledge and resources that enable continuous learning and personal growth.</p>
+        
+        <h3>Our Vision</h3>
+        <p>We envision a world where education is available to everyone, regardless of background or location, creating opportunities for success through knowledge and skills.</p>
+    </section>
+
+     <div class="login-register">
+           <p><a th:href="@{/nav/register}">Get Started</a></p>                    
+     </div>
+ 
+</body>
+</html>

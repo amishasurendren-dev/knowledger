@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Creation</title>
+    <link th:href="@{/css/AddCourseStyle.css}" rel="stylesheet" type="text/css">
+
+<!--
+    <script>
+        function handleFormSubmission(event) {
+            const form = event.target;
+            event.preventDefault(); // Prevent the form from submitting normally
+            alert("Course added successfully!");
+            form.submit(); // Submit the form manually
+        }
+    </script>
+      -->
+</head>
+<body>
+
+<header>
+
+    <div id="logo">
+    </div>
+    <div class="knowledger">
+    <h2><span class="know">Know</span><span class="ledger">Ledger</span></h2>
+    </div>
+    
+    <nav class="navigation">
+         <a href="http://localhost:9094/">Home</a>
+         <a href="/nav/about">About</a>  
+         <a href="/nav/services">Services</a>
+         <a href="/nav/contact">Contacts</a>  
+         <a class="btnLogin" th:href="@{/nav/login}">Login</a>
+    </nav>
+       
+</header>
+
+<div th:if="${successMessage}" class="alert success">
+    <p th:text="${successMessage}"></p>
+</div>
+<div th:if="${errorMessage}" class="alert error">
+    <p th:text="${errorMessage}"></p>
+</div>
+
+
+<div class="wrapper">
+    <h1>Create a New Course!</h1>
+    <!--  <form class="form-box" action="/addCourse" method="post" onsubmit="handleFormSubmission(event)"> -->
+    
+    <form class="form-box" action="/addCourse" method="post"> 
+    
+    <!-- 
+        <div class="mb-3">
+            <label for="courseId" class="form-label">Course ID</label>
+            <input type="text" class="form-control" name="courseId">
+        </div>
+        
+        -->
+
+        <div class="mb-3">
+            <label for="courseName" class="form-label">Course Name</label>
+            <input type="text" class="form-control" name="courseName" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="coursePrice" class="form-label">Course Price</label>
+            <input type="text" class="form-control" name="coursePrice" required>
+        </div>
+
+        <button type="submit" class="button">Create Course</button>
+    </form>
+</div>
+
+<!-- Optional JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

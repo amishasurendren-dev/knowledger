@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Index</title>
+<link th:href = "@{/css/IndexStyle.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+
+    <div id="logo">
+    </div>
+    <div class="knowledger">
+    <h2><span class="know">Know</span><span class="ledger">Ledger</span></h2>
+    </div>
+
+    <nav class="navigation">
+         <a href="http://localhost:9094/">Home</a>
+         <a href="/nav/about">About</a>  
+         <a href="/nav/services">Services</a>
+         <a href="/nav/contact">Contacts</a>  
+         <a class="btnLogin" th:href="@{/nav/login}">Login</a>
+    </nav>
+       
+</header>
+
+    <div class="welcome">
+        <span class="text1">KnowLedger</span>
+        
+        <p class="text2"><b>Where Learning Knows No Bounds.</b></p>
+    </div>
+    
+    
+     <div class="login-register">
+           <p><a  th:href="@{/nav/register}">Get Started</a><p>                    
+     </div>
+ 
+   
+</body>
+</html>

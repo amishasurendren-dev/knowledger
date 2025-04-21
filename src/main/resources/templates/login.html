@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Add IonIcons for the icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+<header>
+    <div id="logo">
+        <!-- Logo content here -->
+    </div>
+    <div class="knowledger">
+        <h2><span class="know">Know</span><span class="ledger">Ledger</span></h2>
+    </div>
+    
+        <nav class="navigation">
+         <a href="http://localhost:9094/">Home</a>
+         <a href="/nav/about">About</a>  
+         <a href="/nav/services">Services</a>
+         <a href="/nav/contact">Contacts</a>  
+         <a class="btnLogin" th:href="@{/nav/login}">Login</a>
+    </nav>
+</header>
+
+<!--  
+<section class="welcome-section">
+    <div class="WelcomeBack">
+        <h1>Welcome Back!</h1>
+        <p>We're thrilled to see you again! We hope you've had a fantastic learning experience with us so far.</p>
+    </div>
+</section>
+
+-->
+
+<div class="wrapper">
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="/nav/validate" method="post">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>                         
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>                         
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me?</label>
+                <a href="#">Forgot Password</a>
+            </div>
+            
+            <button type="submit" class="btn">Submit</button>
+            
+            <div class="login-register">
+                <p>Don't have an account? <a th:href="@{/nav/register}">Register</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- JavaScript libraries for Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

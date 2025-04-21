@@ -1,0 +1,242 @@
+@charset "ISO-8859-1";
+
+html {
+    overflow-y: scroll;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	    color: #c0c0c0;
+	
+	
+ }
+ 
+ 
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 100px;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99;	
+}
+
+header #logo{
+	height: 40px;
+	width: 40px;
+	background-image: url('/images/logo1.jpg');
+	background-repeat: no repeat;
+	background-size: cover;
+	border: 1px solid white;
+	border-radius: 4px;
+	
+	/*
+	font-size: 3em;
+	color: #bdf4e6;
+	border:1px solid white;
+	border-radius: 5px;
+	padding: 7px 14px;
+	background: linear-gradient(135deg,grey 20% ,black 100%);
+	*/
+	
+}
+
+.navigation a{
+	position: relative;
+	font-size: 1.0em;
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 40px;		
+}
+
+header .knowledger{
+	margin-right: 320px;
+	color: white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+	}
+	
+
+header .know{
+	 color: white;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
+	
+header .ledger{
+	 color: #74e9d1;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
+
+
+
+.navigation a::after{
+	content: ' ';
+	position: absolute;
+    left: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 3px;
+	background: white;
+	border-radius: 5px;
+	transform: scaleX(0);	
+	transition: transform .5s;	
+}
+
+.navigation a:hover::after{
+	transform-origin: left;
+	transform: scaleX(1);
+		
+}
+
+
+
+
+.navigation .btnLogin{
+            padding: 8px 18px;
+            font-size: 16px;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;         
+            background-color: black;
+            color: #fff;
+            text-decoration: none;
+            
+        }
+.navigation  .btnLogin:hover{
+	background: white;
+    color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('/images/BGlogin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.WelcomeBack {
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.WelcomeBack h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.WelcomeBack p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.wrapper {
+    width: 400px;
+    padding: 40px;
+        background-color: rgba(51, 51, 51, 0.9); /* Slightly transparent */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.input-box {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #e3e2df;
+    margin: 30px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #c0c0c0;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #c0c0c0;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    background: rgb(55, 223, 189);
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+.login-register {
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
