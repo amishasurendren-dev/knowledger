@@ -46,11 +46,6 @@ public String addCourse(
     } else {
         model.addAttribute("errorMessage", "Failed to create course. Please try again.");
     }
-    
-    System.out.println("Error message: " + model.getAttribute("errorMessage"));
-    System.out.println("Success message: " + model.getAttribute("successMessage"));
-
-
     return "trainerHome";  // Return to the same page
 }
 
@@ -68,7 +63,7 @@ public String showCourseDropdown(Model model) {
     }
 
     model.addAttribute("courseList", courseList);
-    return "addLesson"; // Ensure "addLesson.html" exists in the templates folder
+    return "addLesson";
 }
 
 
@@ -83,7 +78,6 @@ public String lesson(@RequestParam("courseId") int courseId,
         throw new RuntimeException("Course not found for ID: " + courseId);
     }
 
-    // Use the correct constructor without lessonId
     Lesson lesson = new Lesson(lessonName, topics, link, course);
     tService.addLesson(lesson);
 
@@ -113,7 +107,14 @@ public String deleteCourse(@PathVariable("id") int id) {
 
 @GetMapping("/trainerHome")
 public String trainerHomePage() {
-    return "trainerHome";  // This must match your Thymeleaf template name
+    return "trainerHome";
+}
+
+
+@GetMapping("/createCourse")
+public String createCourse() {
+return "createCourse";
+
 }
 
 

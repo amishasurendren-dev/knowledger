@@ -125,7 +125,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-       background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('/images/BGlogin.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url('/images/BGlogin.jpg');
     background-repeat: no-repeat;
     background-size: cover;
      
@@ -137,9 +137,7 @@ body {
 	margin-left: 2px;
 	margin-right: 60px;
 	padding-right: 30px;
-	font-family: Verdana, Geneva, Tahoma;
-	
-	
+	font-family: Verdana, Geneva, Tahoma;	
 }
 
 .motivation h1{
@@ -157,8 +155,7 @@ body {
 	margin-top: 72px; 
 }
 
-.wrapper{
-	
+.wrapper{	
 	width: 400px;
 	height: 440px;
 	margin-top: 70px;

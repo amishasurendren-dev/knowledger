@@ -32,14 +32,9 @@ public class StudentController {
 	@Autowired
 	TrainerService tService;
 	
-	@Autowired
-	CommentService cService;
-	
 	@GetMapping("/viewLesson")
 	public String viewLesson(@RequestParam("lessonId")int lessonId,
 							Model model,HttpSession session) {
-	//	Users user = (Users) session.getAttribute("loggedInUser");
-
 		
 		
 		Lesson lesson = service.getLesson(lessonId);
@@ -51,24 +46,10 @@ public class StudentController {
 		
 		
 		model.addAttribute("lesson",lesson);
-		List<Comments> commentsList=cService.commentList();
-		model.addAttribute("comments",commentsList);
 		
 		return "myLesson";
 	}
-	
-	@PostMapping("/addComment")
-	public String comments(@RequestParam("comment")String comment
-						,Model model) {
-		Comments c=new Comments();
-		c.setComment(comment);
-		cService.addComment(c);
-		
-		List<Comments> commentsList=cService.commentList();
-		model.addAttribute("comments",commentsList);
-		
-		return "myLesson";
-	}
+
 
 	@GetMapping("/purchase")
 	public String showCourses(Model model,HttpSession session) {

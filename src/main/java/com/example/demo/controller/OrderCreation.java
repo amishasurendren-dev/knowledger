@@ -24,39 +24,16 @@ public class OrderCreation {
 	@Autowired
 	TrainerService tService;
 	
-	@SuppressWarnings("finally")
 	@PostMapping("/createOrder")
 	@ResponseBody
 	public String createOrder(@RequestParam("amount") int amount,
-							@RequestParam("email") String email,
-							@RequestParam("courseId") int courseId) {
-//		System.out.println(amount+email+courseId);
-		
-		com.razorpay.Order order=null;
-		/* try {
-			RazorpayClient razorpay=new RazorpayClient("rzp_test_ANiFbfIjOIx3EF", "jgHc0g5bAebbeilwWX1uXP45");
-			*/
-			
-			JSONObject orderRequest = new JSONObject();
-			  orderRequest.put("amount", amount*100); // amount in the smallest currency unit
-			  orderRequest.put("currency", "INR");
-			  orderRequest.put("receipt", "order_rcptid_11");
-			  
-			  
-
-			  //order = razorpay.orders.create(orderRequest);
-			  
-			  return attachCourse(email, courseId);
-			  
-		
-		/* } catch (RazorpayException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-		finally {
-			return order.toString();
-		}*/
+	                          @RequestParam("email") String email,
+	                          @RequestParam("courseId") int courseId) {
+	    attachCourse(email, courseId);
+	    return "Course added to your account!🎉";
 	}
+	
+	
 	public String attachCourse(String email, int courseId) {
 		
 		

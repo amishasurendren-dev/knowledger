@@ -15,31 +15,19 @@
 <body>
 
 <header>
-    <div id="logo">
-        <!-- Logo content here -->
-    </div>
+    <div id="logo"></div>
     <div class="knowledger">
         <h2><span class="know">Know</span><span class="ledger">Ledger</span></h2>
     </div>
     
-        <nav class="navigation">
-         <a href="http://localhost:9094/">Home</a>
-         <a href="/nav/about">About</a>  
-         <a href="/nav/services">Services</a>
-         <a href="/nav/contact">Contacts</a>  
-         <a class="btnLogin" th:href="@{/nav/login}">Login</a>
-    </nav>
+    <nav class="navigation">
+			<a th:href="@{/}">Home</a> 
+			<a th:href="@{/nav/about}">About</a> 
+			<a th:href="@{/nav/services}">Services</a> 
+			<a th:href="@{/nav/contact}">Contacts</a>
+			<a class="btnLogin" th:href="@{/nav/login}">Login</a>
+	</nav>
 </header>
-
-<!--  
-<section class="welcome-section">
-    <div class="WelcomeBack">
-        <h1>Welcome Back!</h1>
-        <p>We're thrilled to see you again! We hope you've had a fantastic learning experience with us so far.</p>
-    </div>
-</section>
-
--->
 
 <div class="wrapper">
     <div class="form-box login">

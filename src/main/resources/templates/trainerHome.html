@@ -12,72 +12,82 @@
 
 <title>Trainer home</title>
 
-<link th:href = "@{/css/TrainerStyle.css}" rel="stylesheet" type="text/css">
+<link th:href="@{/css/TrainerStyle.css}" rel="stylesheet"
+	type="text/css">
 
 
 
 </head>
 
 <body>
-<header>
-
-   
-    <div id="logo">
-    </div>
-    <div class="knowledger">
-    <h2>Know<span>Ledger</span></h2>
-    </div>
-    
-    <nav class="navigation">
-         <a href="http://localhost:9094/">Home</a>
-         <a href="/nav/about">About</a>  
-         <a href="/nav/services">Services</a>
-         <a href="/nav/contact">Contacts</a>  
-         <a class="btnLogin" th:href="@{/nav/login}">Login</a>
-    </nav>
-       
-</header>
+	<header>
 
 
-<div th:if="${errorMessage}" class="alert error">
-    <p th:text="${errorMessage}"></p>
-</div>
+		<div id="logo"></div>
+		<div class="knowledger">
+			<h2>
+				Know<span>Ledger</span>
+			</h2>
+		</div>
 
-<div th:if="${successMessage}" class="alert success">
-    <p th:text="${successMessage}"></p>
-</div>
+		<nav class="navigation">
+			<a th:href="@{/}">Home</a> 
+			<a th:href="@{/nav/about}">About</a> 
+			<a th:href="@{/nav/services}">Services</a> 
+			<a th:href="@{/nav/contact}">Contacts</a>
+			<a class="btnLogin" th:href="@{/nav/login}">Login</a>
+		</nav>
 
-
-<div class="animated-title">
-  <div class="text-top">
-    <div>
-      <span>Welcome Trainer!</span>
-      
-    </div>
-  </div>
-  <div class="text-bottom">
-  <div>
-   <span>Choose your action</span>
-  </div>
-</div>
-</div>
+	</header>
 
 
-    
+	<div th:if="${errorMessage}" class="alert error">
+		<p th:text="${errorMessage}"></p>
+	</div>
+
+	<div th:if="${successMessage}" class="alert success">
+		<p th:text="${successMessage}"></p>
+	</div>
+
+
+	<div class="animated-title">
+		<div class="text-top">
+			<div>
+				<span>Welcome Trainer!</span>
+
+			</div>
+		</div>
+		<div class="text-bottom">
+			<div>
+				<span>Choose your action</span>
+			</div>
+		</div>
+	</div>
 
 
 
-<div class="buttons">
 
-<div class="box"><a href="/nav/createCourse">Add Course</a></div>
-<div class="box"><a href="/lesson">Add Lesson</a></div>
-<div class="box"><a href="/showCourses">View Courses</a></div>
 
-</div>
 
-    
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<div class="buttons">
+
+		<div class="box">
+			<a href="/createCourse">Add Course</a>
+		</div>
+		<div class="box">
+			<a href="/lesson">Add Lesson</a>
+		</div>
+		<div class="box">
+			<a href="/showCourses">View Courses</a>
+		</div>
+
+	</div>
+
+
+	<script type="module"
+		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule
+		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
 </body>

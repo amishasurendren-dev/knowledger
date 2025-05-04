@@ -21,9 +21,6 @@ public class NavigationController {
 	@Autowired
 	UserService uService;
 	
-	@Autowired
-	CommentService cService;
-	
 	
 	@GetMapping("/login")
 	public String login()
@@ -79,7 +76,7 @@ public class NavigationController {
 	      //if user is valid
           if(val==true) 
           {
-    	  Users user = uService.getUser(email); // Assuming you have a method to get the User object
+    	  Users user = uService.getUser(email); 
     	  session.setAttribute("loggedInUser", user); // Saving the User object in session
                 if(uService.getUserRole(email).equals("Student")) 
                    {
@@ -103,13 +100,6 @@ public class NavigationController {
         return "loginFail";
 
 	 }
-	}
-	
-	
-	@GetMapping("/createCourse")
-	public String createCourse() {
-	return "createCourse";
-
 	}
 
 	@GetMapping("/addLesson")

@@ -92,36 +92,6 @@
         </iframe>
     </div>
 
-
-    <!-- <h2 class="mt-4">Leave a comment here:</h2>
-    <form id="commentForm" action="/addComment" method="post" class="mb-4">
-        <textarea id="commentText" name="comment" class="form-control mb-3"></textarea>
-        <button id="submitButton" type="button" class="btn btn-primary">Add Comment</button>
-    </form>
-
-    <h2>Student's Comments:</h2>
-    <div class="comments-list mt-4">
-        <div th:each="comment : ${comments}">
-            <p th:text="${comment.comment}"></p>
-            <hr>
-        </div>
-    </div>
-    </div> -->
-
-    <!-- jQuery library -->
-    <!-- <script>
-    $(document).ready(function(){
-        $("#submitButton").click(function(){
-            var commentText = $("#commentText").val();
-            $.post("/addComment", { comment: commentText })
-            .done(function(data) {
-                $(".comments-list").append('<p>' + commentText + '</p><hr>');
-                $("#commentText").val("");
-            });
-        });
-    });
-    </script> -->
-
 </div>
 
 </body>
